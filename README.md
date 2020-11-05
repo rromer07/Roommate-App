@@ -1,4 +1,4 @@
-#Roommate App
+# Roommate App
 A roommate matching app with the use of Flutter UI framwork
 
 
