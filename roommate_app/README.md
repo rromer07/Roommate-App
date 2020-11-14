@@ -1,5 +1,5 @@
 #Roommate App
-aroommate matching app witht eh use of Flutter UI framework
+A roommate matching app witht eh use of Flutter UI framework
 
 ##Road map
 1. App register/login
