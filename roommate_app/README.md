@@ -1,16 +1,13 @@
-# roommate_app
+#Roommate App
+aroommate matching app witht eh use of Flutter UI framework
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##Road map
+1. App register/login
+2. App forgot password
+3. App create profile
+4. App create listing
+5. App view listing
+6. App profile matching
+7. App messaging.chat system
+8. App notifications
+10. App settings 
