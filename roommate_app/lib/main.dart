@@ -1,29 +1,29 @@
+import 'package:flatemate/models/User.dart';
+import 'package:flatemate/screens/profile/Profile_page.dart';
+import 'package:flatemate/screens/home/Home.dart';
+import 'package:flatemate/screens/wrapper.dart';
+import 'package:flatemate/services/Auth.dart';
 import 'package:flutter/material.dart';
-import 'package:roommate_app/pages/home_page.dart';
-import 'package:roommate_app/pages/login_page.dart';
-import 'package:roommate_app/utils/constants.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:provider/provider.dart';
 
-Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  Constants.prefs = await SharedPreferences.getInstance();
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Constants.prefs.getBool('loggedIn') == true
-          ? HomePage()
-          : LoginPage(),
-      theme: ThemeData(primarySwatch: Colors.yellow),
-      routes: {
-        LoginPage.routeName: (context) => LoginPage(),
-        HomePage.routeName: (context) => HomePage(),
-      },
+    return StreamProvider<User>.value(
+      value: Auth().user,
+          child: MaterialApp(
+        home: Wrapper(),
+         routes: {
+           'home': (context)=>Home(),
+           'profile':(context)=>ProfilePage(),
+        //   'listing':(context)=>Listing(),
+        //   'notifications':(context)=>Notifications(),
+        //   'matching': (context)=>Matching()
+         },
+      ),
     );
   }
 }
